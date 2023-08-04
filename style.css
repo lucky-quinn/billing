@@ -1,0 +1,129 @@
+#summary {
+    width: 350px;
+    height: 200px;
+    background-color: #06C167;
+    color:#fff;
+    font-size: large;
+}
+
+#total {
+    margin-top: 10px;
+    width: 150px;
+    background-color: #06C167;
+    font-size: x-large;
+    color:#fff;
+
+}
+
+
+.item img {
+    max-height: 150px;
+    max-width: 150px;
+    border-radius: 15%;
+}
+.item  {
+    border-radius: 5%;
+    background-color: #06C167;
+}
+
+.header {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+body {
+    background-color: #333;
+    padding-bottom: 100px;
+}
+
+  /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+  @media screen and (max-width: 500px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .header-right {
+      float: none;
+    }
+  }
+
+  .buttons {
+    appearance: none;
+    background-color: #06C167;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 6px 16px;
+    margin-right: 20px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  
+  .buttons:focus:not(:focus-visible):not(.focus-visible) {
+    box-shadow: none;
+    outline: none;
+  }
+  
+  .buttons:hover {
+    background-color: #06C167;
+  }
+  
+  .buttons:focus {
+    box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+    outline: none;
+  }
+  
+  .buttons:disabled {
+    background-color: #94d3a2;
+    border-color: rgba(27, 31, 35, .1);
+    color: rgba(255, 255, 255, .8);
+    cursor: default;
+  }
+  
+  .buttons:active {
+    background-color: #298e46;
+    box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+  }
+
+.boxes {
+    display: flex;
+    flex-direction: column;
+}
+
+.selectbuttons {
+    display:flex;
+    flex-direction: row;
+    padding-top: 20px;
+    align-self: center !important;
+}
+
+footer {
+    background: #333;
+    color: #868c96;
+    bottom: 0;
+    height: 100px;
+    position: fixed;
+    width: 100%;
+}
+
+footer p {
+
+    text-align: center;
+}
+
+footer img {
+    width: 70px;
+}

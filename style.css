@@ -4,6 +4,8 @@
     background-color: #06C167;
     color:#fff;
     font-size: large;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'PT Sans', sans-serif;
 }
 
 #total {
@@ -12,6 +14,8 @@
     background-color: #06C167;
     font-size: x-large;
     color:#fff;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'PT Sans', sans-serif;
 
 }
 

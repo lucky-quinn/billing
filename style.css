@@ -15,9 +15,16 @@
 
 }
 
+h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'PT Sans', sans-serif;
+    color: #fff;
+}
+
 
 .item img {
     max-height: 150px;
+    min-height: 150px;
     max-width: 150px;
     border-radius: 15%;
 }

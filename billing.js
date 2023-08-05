@@ -105,6 +105,33 @@ document.getElementById("JimJam_pops").addEventListener("click", function() {
     billtext.value += '\n' + newText;
   });
 
+document.getElementById("JimJam_treat").addEventListener("click", function() {
+    var billtext = document.getElementById("summary");
+    var billtotal = document.getElementById("total");
+    var newText = "JimJam Treat - 25";
+    total += 25;
+    billtotal.value = total;
+    billtext.value += '\n' + newText;
+  });
+
+document.getElementById("Britania_bourbon").addEventListener("click", function() {
+    var billtext = document.getElementById("summary");
+    var billtotal = document.getElementById("total");
+    var newText = "Britania Bourbon Large - 40";
+    total += 40;
+    billtotal.value = total;
+    billtext.value += '\n' + newText;
+  });
+
+  document.getElementById("actii_caramel_popcorn").addEventListener("click", function() {
+    var billtext = document.getElementById("summary");
+    var billtotal = document.getElementById("total");
+    var newText = "Act II Caramel Popcorn - 10";
+    total += 10;
+    billtotal.value = total;
+    billtext.value += '\n' + newText;
+  });
+
 
   document.getElementById("whatsapp").addEventListener("click", function() {
     var billtext = document.getElementById("summary");
@@ -114,9 +141,16 @@ document.getElementById("JimJam_pops").addEventListener("click", function() {
     for (let i = 1; i < lines.length; i++) {
       text += lines[i] + "%0A"
     }
-    text += "Total: " + total
-    console.log(text)
+    var amount  = total * 1.1
+    amount = (Math.round(amount * 100) / 100).toFixed(2)
+    text += "Total: " + amount
     var link = "https://wa.me/917594985665?text=" + text;
     window.open(link, '_blank');
   });
 
+  document.getElementById("calctotal").addEventListener("click", function() {
+    var billtotal = document.getElementById("total");
+    var amount  = total * 1.1
+    amount = (Math.round(amount * 100) / 100).toFixed(2)
+    billtotal.value = amount
+  });

@@ -72,7 +72,7 @@ document.getElementById("lays_maxx_bbq_30").addEventListener("click", function()
 document.getElementById("Doritos_sizlin_hot_30").addEventListener("click", function() {
     var billtext = document.getElementById("summary");
     var billtotal = document.getElementById("total");
-    var newText = "Doritos Sizlin hot - 30";
+    var newText = "Doritos Sizlin Hot - 30";
     total += 30;
     billtotal.value = total;
     billtext.value += '\n' + newText;
@@ -83,6 +83,15 @@ document.getElementById("lays_gourmet_Vinatage_cheese").addEventListener("click"
     var billtotal = document.getElementById("total");
     var newText = "Lays Gourmet Vinatage Cheese - 30";
     total += 30;
+    billtotal.value = total;
+    billtext.value += '\n' + newText;
+  });
+
+document.getElementById("lays_maxx_sizlin_hot").addEventListener("click", function() {
+    var billtext = document.getElementById("summary");
+    var billtotal = document.getElementById("total");
+    var newText = "Lays Maxx Sizlin Hot - 20";
+    total += 20;
     billtotal.value = total;
     billtext.value += '\n' + newText;
   });
@@ -132,6 +141,59 @@ document.getElementById("Britania_bourbon").addEventListener("click", function()
     billtext.value += '\n' + newText;
   });
 
+  document.getElementById("lays_maxx_nacho_chilli").addEventListener("click", function() {
+    var billtext = document.getElementById("summary");
+    var billtotal = document.getElementById("total");
+    var newText = "Lays Maxx Nacho Chilli - 30";
+    total += 30;
+    billtotal.value = total;
+    billtext.value += '\n' + newText;
+  });
+
+  document.getElementById("Doritos_sweet_chilli").addEventListener("click", function() {
+    var billtext = document.getElementById("summary");
+    var billtotal = document.getElementById("total");
+    var newText = "Doritos Sweet Chilli - 30";
+    total += 30;
+    billtotal.value = total;
+    billtext.value += '\n' + newText;
+  });
+
+  document.getElementById("Doritos_nacho_cheese").addEventListener("click", function() {
+    var billtext = document.getElementById("summary");
+    var billtotal = document.getElementById("total");
+    var newText = "Doritos Nacho Cheese - 30";
+    total += 30;
+    billtotal.value = total;
+    billtext.value += '\n' + newText;
+  });
+
+  document.getElementById("fab_bourbon").addEventListener("click", function() {
+    var billtext = document.getElementById("summary");
+    var billtotal = document.getElementById("total");
+    var newText = "Fab Bourbon - 35";
+    total += 35;
+    billtotal.value = total;
+    billtext.value += '\n' + newText;
+  });
+
+  document.getElementById("unibic_choconut").addEventListener("click", function() {
+    var billtext = document.getElementById("summary");
+    var billtotal = document.getElementById("total");
+    var newText = "Unibic Choconut - 40";
+    total += 40;
+    billtotal.value = total;
+    billtext.value += '\n' + newText;
+  });
+
+  document.getElementById("hide_n_seek_sandwich").addEventListener("click", function() {
+    var billtext = document.getElementById("summary");
+    var billtotal = document.getElementById("total");
+    var newText = "Hide N seek Sandwich (one flavor) - 38 ";
+    total += 38;
+    billtotal.value = total;
+    billtext.value += '\n' + newText;
+  });
 
   document.getElementById("whatsapp").addEventListener("click", function() {
     var billtext = document.getElementById("summary");

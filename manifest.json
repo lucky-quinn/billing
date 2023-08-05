@@ -1,0 +1,13 @@
+{
+    "name": "Aprem Meals",
+    "short_name": "Aprem Meals",
+    "icons": [
+      {
+        "src": "images/Logo.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "/",
+    "display": "standalone"
+  }

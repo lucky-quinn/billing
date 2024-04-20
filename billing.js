@@ -285,12 +285,12 @@ document.getElementById("lays_maxx_sizlin_hot").addEventListener("click", functi
     window.open(link, '_blank');
   });
 
-  // document.getElementById("calctotal").addEventListener("click", function() {
-  //   var billtotal = document.getElementById("total");
-  //   var amount  = total * 1.1
-  //   amount = (Math.round(amount * 100) / 100).toFixed(2)
-  //   billtotal.value = amount
-  // });
+  document.getElementById("calctotal").addEventListener("click", function() {
+    var billtotal = document.getElementById("total");
+    var amount  = total * 1.1
+    amount = (Math.round(amount * 100) / 100).toFixed(2)
+    billtotal.value = amount
+  });
 
 // service-worker.js
 self.addEventListener('install', event => {

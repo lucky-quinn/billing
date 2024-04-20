@@ -50,6 +50,81 @@ document.getElementById("lays_50").addEventListener("click", function() {
     billtext.value += '\n' + newText;
   });
 
+document.getElementById("lays_maxx_sizlin_hot").addEventListener("click", function() {
+    var billtext = document.getElementById("summary");
+    var billtotal = document.getElementById("total");
+    var newText = "Lays sizlin hot - 10";
+    total += 10;
+    billtotal.value = total;
+    billtext.value += '\n' + newText;
+  });
+
+  document.getElementById("kurekure_masala_munch").addEventListener("click", function() {
+    var billtext = document.getElementById("summary");
+    var billtotal = document.getElementById("total");
+    var newText = "Kurekure masala munch- 10";
+    total += 10;
+    billtotal.value = total;
+    billtext.value += '\n' + newText;
+  });
+  
+  document.getElementById("lays_magic_masala10").addEventListener("click", function() {
+    var billtext = document.getElementById("summary");
+    var billtotal = document.getElementById("total");
+    var newText = "Lays Magic Masala- 10";
+    total += 10;
+    billtotal.value = total;
+    billtext.value += '\n' + newText;
+  });
+  document.getElementById("kurekure_puffcorn").addEventListener("click", function() {
+    var billtext = document.getElementById("summary");
+    var billtotal = document.getElementById("total");
+    var newText = "kurekure_puffcorn - 10";
+    total += 10;
+    billtotal.value = total;
+    billtext.value += '\n' + newText;
+  });
+  document.getElementById("hide_n_seek").addEventListener("click", function() {
+    var billtext = document.getElementById("summary");
+    var billtotal = document.getElementById("total");
+    var newText = "hide_n_seek - 30";
+    total += 30;
+    billtotal.value = total;
+    billtext.value += '\n' + newText;
+  });
+  document.getElementById("oreo").addEventListener("click", function() {
+    var billtext = document.getElementById("summary");
+    var billtotal = document.getElementById("total");
+    var newText = "Oreo - 10";
+    total += 10;
+    billtotal.value = total;
+    billtext.value += '\n' + newText;
+  });
+  document.getElementById("pepsi").addEventListener("click", function() {
+    var billtext = document.getElementById("summary");
+    var billtotal = document.getElementById("total");
+    var newText = "pepsi - 20";
+    total += 20;
+    billtotal.value = total;
+    billtext.value += '\n' + newText;
+  });
+  document.getElementById("7up").addEventListener("click", function() {
+    var billtext = document.getElementById("summary");
+    var billtotal = document.getElementById("total");
+    var newText = "7up - 20";
+    total += 20;
+    billtotal.value = total;
+    biltext.value += '\n' + newText;
+  });
+  document.getElementById("appyfizz").addEventListener("click", function() {
+    var billtext = document.getElementById("summary");
+    var billtotal = document.getElementById("total");
+    var newText = "AppyFizz- 20";
+    total += 20;
+    billtotal.value = total;
+    biltext.value += '\n' + newText;
+  });
+
 document.getElementById("lays_gourmet_tc_30").addEventListener("click", function() {
     var billtext = document.getElementById("summary");
     var billtotal = document.getElementById("total");

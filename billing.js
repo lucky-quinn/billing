@@ -1,5 +1,42 @@
+import data from "./data.js";
+
 var total = 0
 
+let categories = data;
+console.log(categories);
+let listing = document.getElementById("listings");
+categories.forEach(c => {
+  let cat_heading = document.createElement("h1");
+  cat_heading.innerText = c.name;
+  console.log(cat_heading);
+
+  listing.append(cat_heading);
+
+  c.products.forEach((p)=> {
+    let product_card = document.createElement("button");
+    product_card.classList.add("item");
+    product_card.id = `${p.name}_card`;
+    product_card.disabled = !p.instock;
+    if (!p.instock) {
+      product_card.className.add("no_stock");
+    }
+    let product_img = document.createElement("img");
+    product_img.src = `images/${p.img}`
+    product_img.alt = p.name
+    product_card.append(product_img);
+    listing.append(product_card);
+    product_card.addEventListener("click", function () {
+      var billtext = document.getElementById("summary");
+      var billtotal = document.getElementById("total");
+      var newText = `${p.name} - ${p.cost}`;
+      total += p.cost;
+      billtotal.value = total;
+      billtext.value += '\n' + newText;
+    })
+  })
+
+
+})
 //For future
 // class Product {
 //     constructor(productName, productPrice, productTag, productQuantity) {
@@ -38,237 +75,6 @@ document.getElementById("delete").addEventListener("click", function() {
     textarea.value = lines.join("\n");
   }
 });
-
-
-  
-// document.getElementById("lays_50").addEventListener("click", function() {
-//     var billtext = document.getElementById("summary");
-//     var billtotal = document.getElementById("total");
-//     var newText = "Lays American Style Cream n Onion - 50";
-//     total += 50;
-//     billtotal.value = total;
-//     billtext.value += '\n' + newText;
-//   });
-
-document.getElementById("lays_maxx_sizlin_hot").addEventListener("click", function() {
-    var billtext = document.getElementById("summary");
-    var billtotal = document.getElementById("total");
-    var newText = "Lays sizlin hot - 10";
-    total += 10;
-    billtotal.value = total;
-    billtext.value += '\n' + newText;
-  });
-
-  document.getElementById("kurekure_masala_munch").addEventListener("click", function() {
-    var billtext = document.getElementById("summary");
-    var billtotal = document.getElementById("total");
-    var newText = "Kurekure masala munch- 10";
-    total += 10;
-    billtotal.value = total;
-    billtext.value += '\n' + newText;
-  });
-  
-  document.getElementById("lays_magic_masala10").addEventListener("click", function() {
-    var billtext = document.getElementById("summary");
-    var billtotal = document.getElementById("total");
-    var newText = "Lays Magic Masala- 10";
-    total += 10;
-    billtotal.value = total;
-    billtext.value += '\n' + newText;
-  });
-  document.getElementById("kurekure_puffcorn").addEventListener("click", function() {
-    var billtext = document.getElementById("summary");
-    var billtotal = document.getElementById("total");
-    var newText = "kurekure_puffcorn - 10";
-    total += 10;
-    billtotal.value = total;
-    billtext.value += '\n' + newText;
-  });
-  document.getElementById("hide_n_seek").addEventListener("click", function() {
-    var billtext = document.getElementById("summary");
-    var billtotal = document.getElementById("total");
-    var newText = "hide_n_seek - 30";
-    total += 30;
-    billtotal.value = total;
-    billtext.value += '\n' + newText;
-  });
-  document.getElementById("oreo").addEventListener("click", function() {
-    var billtext = document.getElementById("summary");
-    var billtotal = document.getElementById("total");
-    var newText = "Oreo - 10";
-    total += 10;
-    billtotal.value = total;
-    billtext.value += '\n' + newText;
-  });
-  document.getElementById("pepsi").addEventListener("click", function() {
-    var billtext = document.getElementById("summary");
-    var billtotal = document.getElementById("total");
-    var newText = "pepsi - 20";
-    total += 20;
-    billtotal.value = total;
-    billtext.value += '\n' + newText;
-  });
-  document.getElementById("7up").addEventListener("click", function() {
-    var billtext = document.getElementById("summary");
-    var billtotal = document.getElementById("total");
-    var newText = "7up - 20";
-    total += 20;
-    billtotal.value = total;
-    billtext.value += '\n' + newText;
-  });
-  document.getElementById("appyfizz").addEventListener("click", function() {
-    var billtext = document.getElementById("summary");
-    var billtotal = document.getElementById("total");
-    var newText = "AppyFizz- 20";
-    total += 20;
-    billtotal.value = total;
-    billtext.value += '\n' + newText;
-  });
-
-// document.getElementById("lays_gourmet_tc_30").addEventListener("click", function() {
-//     var billtext = document.getElementById("summary");
-//     var billtotal = document.getElementById("total");
-//     var newText = "Lays Gourmet Thai Sweet Chilli - 30";
-//     total += 30;
-//     billtotal.value = total;
-//     billtext.value += '\n' + newText;
-//   });
-
-// document.getElementById("lays_maxx_bbq_30").addEventListener("click", function() {
-//     var billtext = document.getElementById("summary");
-//     var billtotal = document.getElementById("total");
-//     var newText = "Lays Maxx Sizlin BBQ - 30";
-//     total += 30;
-//     billtotal.value = total;
-//     billtext.value += '\n' + newText;
-//   });
-
-  
-// document.getElementById("Doritos_sizlin_hot_30").addEventListener("click", function() {
-//     var billtext = document.getElementById("summary");
-//     var billtotal = document.getElementById("total");
-//     var newText = "Doritos Sizlin Hot - 30";
-//     total += 30;
-//     billtotal.value = total;
-//     billtext.value += '\n' + newText;
-//   });
-
-// document.getElementById("lays_gourmet_Vinatage_cheese").addEventListener("click", function() {
-//     var billtext = document.getElementById("summary");
-//     var billtotal = document.getElementById("total");
-//     var newText = "Lays Gourmet Vinatage Cheese - 30";
-//     total += 30;
-//     billtotal.value = total;
-//     billtext.value += '\n' + newText;
-//   });
-
-// document.getElementById("lays_maxx_sizlin_hot").addEventListener("click", function() {
-//     var billtext = document.getElementById("summary");
-//     var billtotal = document.getElementById("total");
-//     var newText = "Lays Maxx Sizlin Hot - 20";
-//     total += 20;
-//     billtotal.value = total;
-//     billtext.value += '\n' + newText;
-//   });
-  
-// document.getElementById("Kurekure_Naughty_tomato").addEventListener("click", function() {
-//     var billtext = document.getElementById("summary");
-//     var billtotal = document.getElementById("total");
-//     var newText = "Kurekure Naughty Tomato - 20";
-//     total += 20;
-//     billtotal.value = total;
-//     billtext.value += '\n' + newText;
-//   });
-
-// document.getElementById("JimJam_pops").addEventListener("click", function() {
-//     var billtext = document.getElementById("summary");
-//     var billtotal = document.getElementById("total");
-//     var newText = "JimJam Pops - 20";
-//     total += 20;
-//     billtotal.value = total;
-//     billtext.value += '\n' + newText;
-//   });
-
-// document.getElementById("JimJam_treat").addEventListener("click", function() {
-//     var billtext = document.getElementById("summary");
-//     var billtotal = document.getElementById("total");
-//     var newText = "JimJam Treat - 25";
-//     total += 25;
-//     billtotal.value = total;
-//     billtext.value += '\n' + newText;
-//   });
-
-// document.getElementById("Britania_bourbon").addEventListener("click", function() {
-//     var billtext = document.getElementById("summary");
-//     var billtotal = document.getElementById("total");
-//     var newText = "Britania Bourbon Large - 40";
-//     total += 40;
-//     billtotal.value = total;
-//     billtext.value += '\n' + newText;
-//   });
-
-//   document.getElementById("actii_caramel_popcorn").addEventListener("click", function() {
-//     var billtext = document.getElementById("summary");
-//     var billtotal = document.getElementById("total");
-//     var newText = "Act II Caramel Popcorn - 10";
-//     total += 10;
-//     billtotal.value = total;
-//     billtext.value += '\n' + newText;
-//   });
-
-//   document.getElementById("lays_maxx_nacho_chilli").addEventListener("click", function() {
-//     var billtext = document.getElementById("summary");
-//     var billtotal = document.getElementById("total");
-//     var newText = "Lays Maxx Nacho Chilli - 30";
-//     total += 30;
-//     billtotal.value = total;
-//     billtext.value += '\n' + newText;
-//   });
-
-//   document.getElementById("Doritos_sweet_chilli").addEventListener("click", function() {
-//     var billtext = document.getElementById("summary");
-//     var billtotal = document.getElementById("total");
-//     var newText = "Doritos Sweet Chilli - 30";
-//     total += 30;
-//     billtotal.value = total;
-//     billtext.value += '\n' + newText;
-//   });
-
-//   document.getElementById("Doritos_nacho_cheese").addEventListener("click", function() {
-//     var billtext = document.getElementById("summary");
-//     var billtotal = document.getElementById("total");
-//     var newText = "Doritos Nacho Cheese - 30";
-//     total += 30;
-//     billtotal.value = total;
-//     billtext.value += '\n' + newText;
-//   });
-
-//   document.getElementById("fab_bourbon").addEventListener("click", function() {
-//     var billtext = document.getElementById("summary");
-//     var billtotal = document.getElementById("total");
-//     var newText = "Fab Bourbon - 35";
-//     total += 35;
-//     billtotal.value = total;
-//     billtext.value += '\n' + newText;
-//   });
-
-//   document.getElementById("unibic_choconut").addEventListener("click", function() {
-//     var billtext = document.getElementById("summary");
-//     var billtotal = document.getElementById("total");
-//     var newText = "Unibic Choconut - 40";
-//     total += 40;
-//     billtotal.value = total;
-//     billtext.value += '\n' + newText;
-//   });
-
-//   document.getElementById("hide_n_seek_sandwich").addEventListener("click", function() {
-//     var billtext = document.getElementById("summary");
-//     var billtotal = document.getElementById("total");
-//     var newText = "Hide N seek Sandwich (one flavor) - 38 ";
-//     total += 38;
-//     billtotal.value = total;
-//     billtext.value += '\n' + newText;
-//   });
 
   document.getElementById("whatsapp").addEventListener("click", function() {
     var billtext = document.getElementById("summary");
